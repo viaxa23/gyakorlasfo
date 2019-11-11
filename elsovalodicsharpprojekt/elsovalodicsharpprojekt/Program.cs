@@ -10,7 +10,7 @@ namespace elsovalodicsharpprojekt
     {
         static void Main(string[] args)
         {
-             // 1. feladat :
+            // 1. feladat :
             /*string kiir = "Hello World";
             Console.WriteLine(kiir);*/
 
@@ -76,7 +76,7 @@ namespace elsovalodicsharpprojekt
             }*/
 
             // 8. feladat : 
-            Console.Write("Adj meg egy számot: ");
+            /*Console.Write("Adj meg egy számot: ");
             int szamA = Convert.ToInt32(Console.ReadLine());
             Console.Write("Adj meg egy másik számot: ");
             int szamB = Int32.Parse(Console.ReadLine());
@@ -91,7 +91,39 @@ namespace elsovalodicsharpprojekt
             else
             {
                 Console.WriteLine("A feladat nem megoldható!");
+            }*/
+
+            //15. feladat:
+            Console.WriteLine("Kérem a pozitív egész számot:  ");
+            int bemenoSzam = Int32.Parse(Console.ReadLine());
+            /*string kiiratas = "";
+
+            for (int i = 1; i < bemenoSzam; i++)
+            {
+                kiiratas += i + " ";
             }
+
+            Console.WriteLine(kiiratas);
+
+            for (int i = 1; i < bemenoSzam; i++)
+            {
+                Console.Write(i + " ");
+            }*/
+
+            /*int i = 1;
+             Elől tesztelő ciklus
+            while (i < bemenoSzam)
+            {
+                Console.Write(i + " ");
+                //i = i + 1;
+                //i += 1;
+                i++;
+            }*/
+            /*Hátul tesztelő ciklus
+            do
+            {
+                Console.Write(i++ + " ");
+            } while (i < bemenoSzam);*/
 
             Console.ReadKey(true);
         }
