@@ -94,8 +94,8 @@ namespace elsovalodicsharpprojekt
             }*/
 
             //15. feladat:
-            Console.WriteLine("Kérem a pozitív egész számot:  ");
-            int bemenoSzam = Int32.Parse(Console.ReadLine());
+            /*Console.WriteLine("Kérem a pozitív egész számot:  ");
+            int bemenoSzam = Int32.Parse(Console.ReadLine());*/
             /*string kiiratas = "";
 
             for (int i = 1; i < bemenoSzam; i++)
@@ -125,7 +125,168 @@ namespace elsovalodicsharpprojekt
                 Console.Write(i++ + " ");
             } while (i < bemenoSzam);*/
 
+            //16. feladat
+
+            /*Console.WriteLine("Kérem a pozitív egész számot:  ");
+            int bemenoSzam = Int32.Parse(Console.ReadLine());
+            string kiiratas = "";*/
+
+            /*for (int i = 1; i < bemenoSzam; i++)
+            {
+                kiiratas += i + "\n";  // \n jelöli a sortörést!
+            }
+
+            Console.WriteLine(kiiratas);*/
+
+            /*for (int i = 1; i < bemenoSzam; i++)
+            {
+                Console.WriteLine(i);
+            }*/
+
+            /*int i = 1;
+             //Elől tesztelő ciklus
+            while (i < bemenoSzam)
+            {
+                Console.Write(i++);
+                //i = i + 1;
+                //i += 1;
+                i++;
+            }*/
+            //Hátul tesztelő ciklus
+            /*int i = 1;
+            do
+            {
+                Console.WriteLine(i++);
+            } while (i < bemenoSzam);*/
+
+            //17. feladat
+            /*Console.WriteLine("Kérem a pozitív egész számot:  ");
+            int bemenoSzam = Int32.Parse(Console.ReadLine());*/
+
+            /*for (int i = 0; i <= bemenoSzam; i++)
+            {
+                if (bemenoSzam % i==0)
+                {
+                    Console.WriteLine(i);
+                }
+            }*/
+
+            // Plusz feladat: Pozitív szám prím-e?
+
+            /*Console.WriteLine("Kérem a pozitív egész számot:  ");
+            int bemenoSzam = Int32.Parse(Console.ReadLine());
+
+            int szamlalo = 0;
+            int osztokOsszege = 0;
+
+            for (int i = 1; i < bemenoSzam + 1; i++)
+            {
+                if (bemenoSzam % i ==0)
+                {
+                    szamlalo++;
+                    osztokOsszege += i;
+                }
+            }
+            if (szamlalo == 2)
+            {
+                Console.WriteLine($"A bemenő szám {bemenoSzam} prím.");
+                Console.WriteLine($"A bemenő szám {bemenoSzam} osztóinak összege: {osztokOsszege}");
+            }
+            else
+            {
+                Console.WriteLine($"A bemenő szám {bemenoSzam} nem prím");
+                Console.WriteLine($"A bemenő szám {bemenoSzam} osztóinak összege: {osztokOsszege}");
+            }*/
+            //19. feladat: 
+            /*Console.WriteLine("Kérem a pozitív egész számot:  ");
+            int bemenoSzam = Int32.Parse(Console.ReadLine());
+
+            int osztokOsszege = 0;
+
+            int i = 1;
+
+            while (i <= bemenoSzam)
+            {
+                if (bemenoSzam % 1 == 0)
+                {
+                    osztokOsszege += 1;
+                }
+                i++;
+            }
+            if (osztokOsszege == 2 * bemenoSzam)
+            {
+                Console.WriteLine($"A szám {bemenoSzam} tökéletes szám.");
+            }
+            else
+            {
+                Console.WriteLine($"A szám {bemenoSzam} nem tökéletes szám." );
+            }*/
+
+            //20. feladat:
+            /* int alap = -1;
+             while (alap < 0 || alap >= 10)
+             {
+                 Console.WriteLine("Kérem az alapot:  ");
+                 int alap = Int32.Parse(Console.ReadLine());
+             }
+             int kitevo = -1;
+             while (kitevo < 0 || alap >= 10)
+             {
+                 Console.WriteLine("Kérem a kitevőt:  ");
+                 int kitevo = Int32.Parse(Console.ReadLine());
+                 int kitevo = -1; 
+             Console.WriteLine("Kérem a kitevőt:  ");
+             int kitevo = Int32.Parse(Console.ReadLine());
+             int hatvany = 1;
+
+             for (int i = 0; i < kitevo; i++)
+             {
+                 hatvany *= alap;
+             }
+             Console.Write($"hatvány: {hatvany}");*/
+
+            //21. feladat:
+            /*int szam = 0;
+
+            while (szam <=0)
+            {
+                Console.Write($"Kérek egy pozitív egész számot: ");
+                szam = Convert.ToInt32(Console.ReadLine());
+            }*/
+
+            // Plusz feladat: Prímszámra lépjen ki a ciklusból
+
+            int szam = 3;
+
+            while (primSzamE(szam))
+            {
+                Console.Write($"Kérek egy nem prímszámot: ");
+                szam = Convert.ToInt32(Console.ReadLine());
+            }
             Console.ReadKey(true);
+        }
+        static bool primSzamE(int szam)
+        {
+            bool teljesul = true;
+
+            int osztokSzama = 0;
+
+            for (int i = 1; i < szam; i++)
+            {
+                if (szam % i == 0)
+                {
+                    osztokSzama++;
+                }
+             
+            }
+            if (osztokSzama == 2)
+            {
+                return teljesul;
+            }
+            else
+            {
+                return !teljesul;
+            }
         }
     }
 }
