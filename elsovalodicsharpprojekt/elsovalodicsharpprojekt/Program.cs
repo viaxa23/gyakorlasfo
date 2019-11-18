@@ -256,13 +256,27 @@ namespace elsovalodicsharpprojekt
 
             // Plusz feladat: Prímszámra lépjen ki a ciklusból
 
-            int szam = 3;
+            /*int szam = 3;
 
             while (primSzamE(szam))
             {
                 Console.Write($"Kérek egy nem prímszámot: ");
                 szam = Convert.ToInt32(Console.ReadLine());
+            }*/
+            //22. feladt: 
+            int szam = 11;
+
+            int osszeg = 0;
+
+            while (szam <= 10)
+            {
+                Console.WriteLine($"Kérek egy 10-nél kisebb egész számot: ");
+                szam = Int32.Parse(Console.ReadLine())
+                osszeg += szam;
             }
+            Console.WriteLine($"Az eddig beolvasott számok összeg: {osszeg}.");
+            
+    
             Console.ReadKey(true);
         }
         static bool primSzamE(int szam)
